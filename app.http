@@ -1,0 +1,56 @@
+GET http://localhost:3000/
+
+###
+
+GET http://localhost:3000/states/ 
+
+###
+GET http://localhost:3000/states/1
+
+###
+
+GET http://localhost:3000/districts/
+
+###
+GET http://localhost:3000/districts/2
+###
+
+
+POST http://localhost:3000/districts/
+Content-Type: application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+###
+
+DELETE http://localhost:3000/districts/765
+
+###
+
+PUT http://localhost:3000/districts/2
+Content-Type: application/json
+
+{
+  "districtId": 2,
+  "districtName": "Andaman",
+  "stateId": 1,
+  "cases": 1,
+  "cured": 1,
+  "active": 0,
+  "deaths": 0
+}
+
+###
+
+GET http://localhost:3000/states/11/stats/
+
+###
+
+GET http://localhost:3000/districts/2/details/
